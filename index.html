@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Flat UI Pro 101 Template</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Loading Bootstrap -->
+    <link href="css/vendor/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Loading Flat UI Pro -->
+    <link href="css/flat-ui-pro.css" rel="stylesheet">
+
+    <link rel="shortcut icon" href="img/favicon.ico">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="js/vendor/html5shiv.js"></script>
+      <script src="js/vendor/respond.min.js"></script>
+    <![endif]-->
+	<link href="css/modal.css" rel="stylesheet">
+    <!-- jQuery (necessary for Flat UI's JavaScript plugins) -->
+    <script src="js/vendor/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/flat-ui-pro.min.js"></script>
+    <script src="js/anime.min.js"></script>
+</head>
+<body>
+	<div class="vn-nav">
+		<ul>
+			<li><a href="#modal-1">Modal 1</a>
+			</li>
+		</ul>
+	</div>
+	<div id="modal-1" class="modalDialog">
+		<div style="text-align: center;">
+			<a href="#close" title="Close" class="close">X</a>
+			<p>Securing your session...</p>
+			<img src="img/lock.png"/>
+			<div style="background: #ebedef; padding: 10px; margin-top: 5px; box-shadow: 0 2px 2px 0px grey;">
+				<div class="progress" style="background: #cccccc; margin: 0;">
+					<div id="progressbar" class="progress-bar progress-bar-info" style="width: 0%;"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div id="modal-2" class="modalDialog">
+		<div style="width: 780px;">
+			<a href="#close" title="Close" class="close">X</a>
+			<p style="background: url(img/modal-2.png) no-repeat;padding: 5px 0 10px 60px;font-size: 24px;font-weight: bold;">Welcome to ScratchAll</p>
+			<p>You will now be guided through a series of steps and questions to generate the scratch off games with a high-probability of winning in your immediate area!</p>
+			<p>ScratchAI's recommendation engine will generate new results updated in real-time in order to give you the freshest set of games to play. The results are not cached or shared. This means you'll get the very best scratch game recommendations after each query.</p>
+			<p>ScratchAI will be crunching a significant amount of data in the background. Please be patient during this process, and good luck!</p>
+
+			<div style="background: #ebedef; padding: 10px; margin-top: 5px; box-shadow: 0 2px 2px 0px grey; text-align: center;">
+				<a href="#" class="btn btn-block btn-lg btn-info" style="width: 290px;
+    display: initial;" >Start Crunching Scratch Data</a>
+			</div>
+		</div>
+	</div>
+</body>
+<script>
+	$(function() {
+		document.location = '#modal-1';
+		var timeline = anime.timeline();
+
+		timeline.add({
+			targets: '#progressbar',
+			width: '100%',
+			easing: 'linear',
+			delay: 0,
+			duration: 4000
+		}).complete = nextModal;
+		
+		var modal = 1;
+		function nextModal() {
+			modal ++;
+			document.location = '#modal-' + modal;
+		}
+	})
+</script>
+</html>

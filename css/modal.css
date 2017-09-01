@@ -1,0 +1,86 @@
+/* Vn Navigasi
+-------------------------*/
+.vn-nav{
+  background:#1abc9c;
+  border-radius:6px;
+  width:auto;
+  padding-top:15px;
+  padding-bottom:15px;
+  font-size:14px;
+  padding-left:20px;
+  border-bottom: #16a085 3px solid;
+  margin-bottom:10px;
+}
+
+.vn-nav ul { margin: 0; padding: 0; list-style-type: none; list-style-image: none; }
+
+.vn-nav li { margin-right: 0px; display: inline; }
+
+.vn-nav ul li a { text-decoration:none;  margin: 0px; padding: 15px 20px 15px 20px; color:#ffffff; }
+
+.vn-nav li.current-menu-item a{ color: #fff; text-decoration:none; background-color:#16a085; }
+
+.vn-nav li.current_page_item  { color: #fff; text-decoration:none; background-color:#16a085; }
+
+/* Vn Simple Modal
+-------------------------*/
+.modalDialog {
+	position: fixed;
+	font-family: Arial, Helvetica, sans-serif;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background: rgba(0,0,0,0.8);
+	z-index: 99999;
+	opacity:0;
+	-webkit-transition: opacity 400ms ease-in;
+	-moz-transition: opacity 400ms ease-in;
+	transition: opacity 400ms ease-in;
+	pointer-events: none;
+}
+
+.modalDialog:target {
+	opacity:1;
+	pointer-events: auto;
+}
+
+.modalDialog > div {
+	width: 400px;height:auto;
+	position: relative;
+	margin: 5% auto;
+	padding: 5px 20px 13px 20px;
+	background: #fff;color:#000;
+}
+
+.close {
+	background: #2c3e50;
+	color: #16a085;padding:5px;border-radius:0 0 12px 0;
+	line-height: 16px;
+	position: absolute;
+	right: -55px;
+	text-align: center;
+	top: 0;
+	width: 16px;
+	text-decoration: none;
+	font-weight: bold;
+}
+
+.close:hover { background: #2c3e50;color:#e74c3c }
+
+/* Vn Button
+-------------------------*/
+
+.vn-green a{
+background-color:#27ae60;
+  display:inline-block;
+  position:relative;
+  margin:30px 5px;
+  padding:20px 20px 20px 80px;
+  color:#fff;
+  transition:all 0.4s ease
+}
+
+.vn-green a:hover{
+  background:#2c3e50
+}
